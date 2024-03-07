@@ -1,15 +1,15 @@
 import React from 'react';
-import './Menu.css';
+import './Navbar.css';
 import StarbucksLogo from '../assets/logo.png';
 
-const Menu = () => {
+const Navbar = () => {
   return (
     <div className="menu">
     <div className="left-menu">
       <img src={StarbucksLogo} alt="Starbucks Logo" className="logo" /> {/* Agrega el logo */}
-      <a href="/">MENU</a>
-      <a href="/">REWARDS</a>
-      <a href="/">GIFT CARDS</a>
+      <a href="/menu">MENU</a>
+      <a href="/rewards">REWARDS</a>
+      <a href="/gift">GIFT CARDS</a>
     </div>
     <div className="right-menu">
     <a href="/"><i className="fas fa-map-marker-alt"></i> Find a store</a>
@@ -20,4 +20,4 @@ const Menu = () => {
   );
 }
 
-export default Menu;
+export default Navbar;

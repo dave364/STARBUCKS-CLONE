@@ -1,0 +1,79 @@
+body, html {
+    height: 100%;
+}
+
+/* The hero image */
+.heroimage {
+  height: 750px;
+  background-image:  url("../assets/xlhero.png");
+  background-color: #d4e9e2;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+/* Place text in the middle of the image */
+.herotext {
+    text-align: left;
+    margin-left: auto;
+    font-weight: 600 !important;
+    height: 750px;
+    padding: 250px;
+}
+
+.oval-button.join-now-reg {
+    font-weight: 600;
+    line-height: 1.2;
+    display: inline-block;
+    padding: 7px 16px;
+    border-radius: 30px; /* Ajusta el radio para que se vea como un ovalo */
+    background-color: #008248; /* Color de fondo del botón Join now */
+    color: #fff; /* Color del texto del botón Join now */
+    text-decoration: none;
+    margin-left: -10px; /* Espaciado entre los botones */
+  }
+  
+  .oval-button.join-now:hover {
+    background-color: #207c51; /* Color de fondo del botón Join now al pasar el ratón */
+  }
+
+  h2 {
+    font-size: 2.4rem;
+    font-weight: 600 !important;
+    font-weight: 400;
+  }
+
+  .text-x1 {
+    color: black;
+  }
+
+  .banner {
+    background-color: #1e3932; /* Color de fondo del banner */
+    color: #ffffff; /* Color del texto */
+    padding: 15px; /* Espacio interno del banner */
+    text-align: left;
+    width: 100%; /* Ancho del banner */
+    position: absolute; /* Cambiado a absolute */
+    top: 0px; /* Colocar el banner en la parte superior */
+    left: 0; /* Colocar el banner en la parte izquierda */
+    transition: top 0.3s ease; /* Transición suave al cambiar la posición */
+    z-index: 999; /* Asegurarse de que el banner esté encima de otros elementos */
+}
+
+  
+  .banner h1 {
+    margin: 0; /* Elimina el margen predeterminado del encabezado */
+    font-size: 15px; /* Tamaño del texto */
+    font-weight: bold; /* Peso de la fuente */
+  }
+  
+  .banner h1 sup {
+    font-size: 0.6em; /* Tamaño de la marca de marca registrada */
+    vertical-align: super; /* Alineación vertical para la marca registrada */
+  }
+   
+
+
+
+

@@ -6,6 +6,7 @@
     padding: 25px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     
+    
   }
   
   .left-menu {
@@ -79,4 +80,11 @@
   
   body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  }
+
+  .fa-map-marker-alt {
+    font-size:  20px;
+    margin-inline: 5px;
+    
+    
   }
