@@ -1,0 +1,23 @@
+.banner {
+    background-color: #1e3932; /* Color de fondo del banner */
+    color: #ffffff; /* Color del texto */
+    padding: 15px; /* Espacio interno del banner */
+    text-align: left;
+    width: 100%; /* Ancho del banner */
+    position: absolute;
+    left: 0; /* Colocar el banner en la parte izquierda */
+    z-index: 999; /* Asegurarse de que el banner esté encima de otros elementos */
+}
+
+  
+  .banner h1 {
+    margin: 0; /* Elimina el margen predeterminado del encabezado */
+    font-size: 15px; /* Tamaño del texto */
+    font-weight: bold; /* Peso de la fuente */
+    margin-left: 230px;
+  }
+  
+  .banner h1 sup {
+    font-size: 0.6em; /* Tamaño de la marca de marca registrada */
+    vertical-align: super; /* Alineación vertical para la marca registrada */
+  }

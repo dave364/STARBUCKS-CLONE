@@ -4,20 +4,22 @@ body, html {
 
 /* The hero image */
 .heroimage {
-  height: 750px;
+  height: 810px;
   background-image:  url("../assets/xlhero.png");
   background-color: #d4e9e2;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  bottom: -60%;
+  background-position-y: 35px;
 }
 
 /* Place text in the middle of the image */
 .herotext {
     text-align: left;
     margin-left: auto;
-    font-weight: 600 !important;
+    font-size: 20px;
     height: 750px;
     padding: 250px;
 }
@@ -44,34 +46,16 @@ body, html {
     font-weight: 400;
   }
 
-  .text-x1 {
+  .text-x1.cr {
     color: black;
   }
 
-  .banner {
-    background-color: #1e3932; /* Color de fondo del banner */
-    color: #ffffff; /* Color del texto */
-    padding: 15px; /* Espacio interno del banner */
-    text-align: left;
-    width: 100%; /* Ancho del banner */
-    position: absolute; /* Cambiado a absolute */
-    top: 0px; /* Colocar el banner en la parte superior */
-    left: 0; /* Colocar el banner en la parte izquierda */
-    transition: top 0.3s ease; /* Transición suave al cambiar la posición */
-    z-index: 999; /* Asegurarse de que el banner esté encima de otros elementos */
-}
+  .cr {
+    color: black!important;
 
-  
-  .banner h1 {
-    margin: 0; /* Elimina el margen predeterminado del encabezado */
-    font-size: 15px; /* Tamaño del texto */
-    font-weight: bold; /* Peso de la fuente */
   }
-  
-  .banner h1 sup {
-    font-size: 0.6em; /* Tamaño de la marca de marca registrada */
-    vertical-align: super; /* Alineación vertical para la marca registrada */
-  }
+
+
    
 
 

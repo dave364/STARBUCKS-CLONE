@@ -3,11 +3,24 @@
     align-items: center;
     justify-content: space-between;
     background-color: #ffffff; /* Color de fondo oscuro */
-    padding: 25px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    
-    
+    padding: 21px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);   
   }
+
+  .menu .left-menu a.active {
+    position: relative;
+}
+
+.menu .left-menu a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -47px;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    
+    box-shadow: 0px -6px #008248; /* Para el efecto de sombra */
+}
   
   .left-menu {
     display: flex;
@@ -51,12 +64,13 @@
   text-decoration: none;
   border: solid 1px;
   margin-left: 20px; /* Espaciado entre los botones */
-  
+
+  font-size: 15px;
 }
 
 .oval-button.sign-in:hover {
     border-color: #0a0c0b;
-  background-color: #f1f8f6; /* Color de fondo del botón Sign in al pasar el ratón */
+  background-color: #0000001a; /* Color de fondo del botón Sign in al pasar el ratón */
 }
 
 
@@ -71,16 +85,17 @@
     background-color: #000; /* Color de fondo del botón Join now */
     color: #fff; /* Color del texto del botón Join now */
     text-decoration: none;
-    margin-left: -10px; /* Espaciado entre los botones */
+    margin-left: 9px;
+    font-size: 15px; /* Espaciado entre los botones */
+    
   }
   
   .oval-button.join-now:hover {
-    background-color: #333; /* Color de fondo del botón Join now al pasar el ratón */
+    border-color: #0a0c0b!important;
+    background-color: #333!important /* Color de fondo del botón Join now al pasar el ratón */
   }
   
-  body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  }
+
 
   .fa-map-marker-alt {
     font-size:  20px;
