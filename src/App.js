@@ -4,6 +4,8 @@ import Navbar from './components/Navbar';
 import Rewards from './components/Rewards';
 import Banner from './components/Banner';
 import Steps from './components/Steps';
+import Tabs from './components/Tabs';
+
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
 function App() {
@@ -17,6 +19,7 @@ function App() {
           <Route path="/rewards" element={<Rewards />} /> {/* Define tus rutas aquí */}
         </Routes>
         <Steps />
+        <Tabs/>
       </div>
     </Router>
   );
