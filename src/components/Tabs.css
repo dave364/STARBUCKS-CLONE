@@ -5,6 +5,7 @@
     background-color: #f1f8f6;
     display: flex;
     justify-content: center;
+    margin-top: -20px;
   }
   
   /* Style the buttons that are used to open the tab content */
@@ -16,31 +17,61 @@
     cursor: pointer;
     padding: 14px 16px;
     transition: 0.3s;
+    font-size: 25px;
   }
   
 
   
  
   
-  /* Style the tab content */
-  .tabcontent {
-    display: none;
-    padding: 6px 12px;
-    border: 1px solid #ccc;
-    border-top: none;
-    background-color:#d4e9e2;
-  }
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+  background-color: #d4e9e2;
+  animation: fadeEffect 0.3s ease-in-out;
+  box-shadow: inset 0 7px 9px -7px #00000024;
+}
 
-  .tabcontent {
-    animation: fadeEffect 1s; /* Fading effect takes 1 second */
+@keyframes fadeEffect {
+  from {
+    opacity: 0.3;
   }
-  
-  /* Go from zero to full opacity */
-  @keyframes fadeEffect {
-    from { opacity: 0; }
-    to { opacity: 1; }
+  to {
+    opacity: 1;
   }
+}
+
 
   .img {
     width: 300px;
+  }
+
+  .tablinks.active {
+    position: relative;
+  }
+  
+  .tablinks.active::after {
+    content: '';
+    position: absolute;
+    bottom: -9px;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    box-shadow: 0px -6px #008248; /* Para el efecto de sombra */
+  }
+
+  .top-text-tab {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 100px;
+    background-color: #f1f8f6;
+  }
+  
+  span {
+    color: #cba258;
+    font-size: 15px;
   }

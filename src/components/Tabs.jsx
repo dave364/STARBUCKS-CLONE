@@ -5,6 +5,7 @@ import icecoffee from '../assets/icecofee100.png';
 import lattescoffee from '../assets/lattescofee200.png';
 import sand from '../assets/sand400.png';
 import beer from '../assets/beer300.png';
+import { useLocation } from 'react-router-dom';
 
 const Tabs = () => {
   useEffect(() => {
@@ -33,42 +34,50 @@ const Tabs = () => {
     evt.currentTarget.classList.add("active");
   };
 
+  const location = useLocation();
+  const isActive = (pathname) => location.pathname === pathname;
+
   return (
     <div>
+    <div className="top-text-tab">
+    <h2>Get your favorites for free</h2>
+  </div>
+    <div>
       <div className="tab">
-        <button className="tablinks" onClick={(e) => openCity(e, '25')} id="defaultOpen">25<span>★</span></button>
-        <button className="tablinks" onClick={(e) => openCity(e, '100')}>100<span>★</span></button>
-        <button className="tablinks" onClick={(e) => openCity(e, '200')}>200<span>★</span></button>
-        <button className="tablinks" onClick={(e) => openCity(e, '300')}>300<span>★</span></button>
-        <button className="tablinks" onClick={(e) => openCity(e, '400')}>400<span>★</span></button>
+      <button className={`tablinks ${isActive('25') ? 'active' : ''}`} onClick={(e) => openCity(e, '25')} id="defaultOpen">25<span>★</span></button>
+      <button className={`tablinks ${isActive('100') ? 'active' : ''}`} onClick={(e) => openCity(e, '100')}>100<span >★</span></button>
+      <button className={`tablinks ${isActive('200') ? 'active' : ''}`} onClick={(e) => openCity(e, '200')}>200<span >★</span></button>
+      <button className={`tablinks ${isActive('300') ? 'active' : ''}`} onClick={(e) => openCity(e, '300')}>300<span >★</span></button>
+      <button className={`tablinks ${isActive('400') ? 'active' : ''}`} onClick={(e) => openCity(e, '400')}>400<span >★</span></button>
+
       </div>
 
       <div id="25" className="tabcontent">
         <img className='img' src={coffee} alt="25" />
         <h3>Customize your drink</h3>
         <p>Make your drink just right with an extra espresso shot, nondairy milk or a dash of your favorite syrup..</p>
-        <span className="close" onClick={() => (document.getElementById("25").style.display = "none")}>x</span>
+        <span className="close" onClick={() => (document.getElementById("25").style.display = "none")}></span>
       </div>
 
       <div id="100" className="tabcontent">
         <img className='img' src={icecoffee} alt="100" />
         <h3>Brewed hot or iced coffee or tea, bakery item, packaged snack and more</h3>
         <p>Treat yourself to an iced coffee, buttery croissant, bag of chips and more..</p>
-        <span className="close" onClick={() => (document.getElementById("100").style.display = "none")}>x</span>
+        <span className="close" onClick={() => (document.getElementById("100").style.display = "none")}></span>
       </div>
 
       <div id="200" className="tabcontent">
         <img className='img' src={lattescoffee} alt="200" />
         <h3>Handcrafted drink (Cold Brew, lattes and more) or hot breakfast</h3>
         <p>Turn good mornings great with a delicious handcrafted drink of your choice, breakfast sandwich or oatmeal on us.</p>
-        <span className="close" onClick={() => (document.getElementById("200").style.display = "none")}>x</span>
+        <span className="close" onClick={() => (document.getElementById("200").style.display = "none")}></span>
       </div>
 
       <div id="300" className="tabcontent">
         <img className='img' src={sand} alt="300" />
         <h3>Sandwich, protein box or at-home coffee</h3>
         <p>Enjoy a PM pick-me-up with a lunch sandwich, protein box or a bag of coffee—including Starbucks VIA Instant®.</p>
-        <span className="close" onClick={() => (document.getElementById("300").style.display = "none")}>x</span>
+        <span className="close" onClick={() => (document.getElementById("300").style.display = "none")}></span>
       </div>
 
       <div id="400" className="tabcontent">
@@ -77,6 +86,7 @@ const Tabs = () => {
         <p>Take home a signature cup, drink tumbler or your choice of coffee merch up to $20.</p>
         <span className="close" onClick={() => (document.getElementById("400").style.display = "none")}>x</span>
       </div>
+    </div>
     </div>
   );
 };
