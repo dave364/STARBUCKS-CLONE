@@ -1,15 +1,17 @@
 .container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Define tres columnas de igual ancho */
-    gap: 20px; /* Espacio entre las columnas */
-    margin-top: 50px;
-    justify-content: center;
-    margin-left: 240px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      justify-content: center;
+      margin-left: 130px;
+      max-width: 1424px;
+      padding-top: 48px;
+      margin-right: 130px;
+      margin-top: 0;
   }
   
   .section {
     text-align: center;
-    max-width: 300px;
+    max-width: 360px;
   }
   
   img {
@@ -18,8 +20,9 @@
   }
   
   h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
+    font-size: 31px;
+    margin-bottom: 25px;
+    font-weight: bold;
   }
   
   h3 {
@@ -30,6 +33,7 @@
   p {
     font-size: 16px;
     line-height: 1.5;
+    font-feature-settings: "calt";
   }
 
   .top-text {
@@ -41,4 +45,11 @@
 
  .Steps-container {
     height: 500px;
+    max-width: 1440px;
+    margin: auto;
  }
+
+ .top-text-tab {
+  text-align: center;
+
+}

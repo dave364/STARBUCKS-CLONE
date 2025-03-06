@@ -5,6 +5,7 @@ body, html {
 /* The hero image */
 .heroimage {
   height: 810px;
+  z-index: -1;
   background-image:  url("../assets/xlhero.png");
   background-color: #d4e9e2;
   background-position: center;
@@ -21,7 +22,9 @@ body, html {
     margin-left: auto;
     font-size: 20px;
     height: 750px;
-    padding: 250px;
+    padding: 290px;
+    max-width: 1440px;
+margin: auto;
 }
 
 .oval-button.join-now-reg {

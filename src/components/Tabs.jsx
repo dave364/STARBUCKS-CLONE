@@ -1,95 +1,118 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './Tabs.css';
 import coffee from '../assets/coffee25.png';
 import icecoffee from '../assets/icecofee100.png';
 import lattescoffee from '../assets/lattescofee200.png';
 import sand from '../assets/sand400.png';
 import beer from '../assets/beer300.png';
-import { useLocation } from 'react-router-dom';
 
 const Tabs = () => {
+  const [activeTab, setActiveTab] = useState('25'); // Estado para la pestaña activa
+  const [barPosition, setBarPosition] = useState({ left: 0, width: 0 }); // Estado para la posición y ancho de la barra verde
+  const barRef = useRef(null); // Referencia para la barra verde
+
+  // Datos para las pestañas
+  const tabsData = [
+    {
+      id: '25',
+      title: '25',
+      subtitle: 'Customize your drink',
+      description: 'Make your drink just right with an extra espresso shot, nondairy milk or a dash of your favorite syrup.',
+      img: coffee,
+    },
+    {
+      id: '100',
+      title: '100',
+      subtitle: 'Brewed hot or iced coffee or tea, bakery item, packaged snack and more',
+      description: 'Treat yourself to an iced coffee, buttery croissant, bag of chips and more.',
+      img: icecoffee,
+    },
+    {
+      id: '200',
+      title: '200',
+      subtitle: 'Handcrafted drink (Cold Brew, lattes and more) or hot breakfast',
+      description: 'Turn good mornings great with a delicious handcrafted drink of your choice, breakfast sandwich or oatmeal on us.',
+      img: lattescoffee,
+    },
+    {
+      id: '300',
+      title: '300',
+      subtitle: 'Sandwich, protein box or at-home coffee',
+      description: 'Enjoy a PM pick-me-up with a lunch sandwich, protein box or a bag of coffee—including Starbucks VIA Instant®. ',
+      img: sand,
+    },
+    {
+      id: '400',
+      title: '400',
+      subtitle: 'Select Starbucks® merchandise',
+      description: 'Take home a signature cup, drink tumbler or your choice of coffee merch up to $20.',
+      img: beer,
+    },
+  ];
+
+  // Este hook maneja el movimiento de la barra verde cuando se cambia de pestaña
   useEffect(() => {
-    // Hacer clic automáticamente en el elemento con el ID "defaultOpen" después de que el componente se monte
-    document.getElementById("defaultOpen").click();
-  }, []); // Utiliza un arreglo vacío como segundo argumento para que se ejecute solo una vez
-
-  const openCity = (evt, cityName) => {
-    // Declare all variables
-    let i, tabcontent, tablinks;
-
-    // Get all elements with class="tabcontent" and hide them
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-      tabcontent[i].style.display = "none";
+    const activeButton = document.querySelector('.tablinks.active');
+    if (activeButton && barRef.current) {
+      const width = activeButton.offsetWidth; // Ancho del botón activo
+      const left = activeButton.offsetLeft; // Posición del botón activo
+      console.log(`width: ${width}, left: ${left}`); // Verificar valores calculados
+      setBarPosition({ width, left }); // Actualiza la posición y el ancho de la barra verde
     }
-
-    // Get all elements with class="tablinks" and remove the class "active"
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-      tablinks[i].classList.remove("active");
-    }
-
-    // Show the current tab, and add an "active" class to the button that opened the tab
-    document.getElementById(cityName).style.display = "block";
-    evt.currentTarget.classList.add("active");
-  };
-
-  const location = useLocation();
-  const isActive = (pathname) => location.pathname === pathname;
+  }, [activeTab]); // El efecto se ejecuta cuando cambia la pestaña activa
 
   return (
     <div>
-    <div className="top-text-tab">
-    <h2>Get your favorites for free</h2>
-  </div>
-    <div>
+      <div className="top-text-tab">
+        <h2>Get your favorites for free</h2>
+      </div>
+
       <div className="tab">
-      <button className={`tablinks ${isActive('25') ? 'active' : ''}`} onClick={(e) => openCity(e, '25')} id="defaultOpen">25<span>★</span></button>
-      <button className={`tablinks ${isActive('100') ? 'active' : ''}`} onClick={(e) => openCity(e, '100')}>100<span >★</span></button>
-      <button className={`tablinks ${isActive('200') ? 'active' : ''}`} onClick={(e) => openCity(e, '200')}>200<span >★</span></button>
-      <button className={`tablinks ${isActive('300') ? 'active' : ''}`} onClick={(e) => openCity(e, '300')}>300<span >★</span></button>
-      <button className={`tablinks ${isActive('400') ? 'active' : ''}`} onClick={(e) => openCity(e, '400')}>400<span >★</span></button>
+        {tabsData.map((tab) => (
+          <button
+            key={tab.id}
+            className={`tablinks ${activeTab === tab.id ? 'active' : ''}`}
+            onClick={() => setActiveTab(tab.id)}
+          >
+            {tab.title}
+            <span>★</span>
+          </button>
+        ))}
 
+        {/* Barra verde única que se mueve */}
+        <div
+          ref={barRef}
+          className="active-bar"
+          style={{
+            position: 'absolute',
+            bottom: '0px',
+            left: `${barPosition.left}px`,  // Cambia la posición horizontal
+            width: `${barPosition.width}px`, // Cambia el ancho
+            height: '4px',
+            backgroundColor: '#008248',
+            transition: 'left 0.3s ease, width 0.3s ease', // Animación suave de la barra verde
+          }}
+        />
       </div>
 
-      <div id="25" className="tabcontent">
-        <img className='img' src={coffee} alt="25" />
-        <h3>Customize your drink</h3>
-        <p>Make your drink just right with an extra espresso shot, nondairy milk or a dash of your favorite syrup..</p>
-        <span className="close" onClick={() => (document.getElementById("25").style.display = "none")}></span>
+      <div className="tab-content-wrapper">
+        {tabsData.map((tab) => (
+          <div
+            key={tab.id}
+            className={`tabcontent ${activeTab === tab.id ? 'active' : ''}`}
+          >
+            <div className="tab-content">
+              <img className="imgtab" src={tab.img} alt={tab.title} />
+              <div className="text-content">
+                <h3>{tab.subtitle}</h3>
+                <p>{tab.description}</p>
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
-
-      <div id="100" className="tabcontent">
-        <img className='img' src={icecoffee} alt="100" />
-        <h3>Brewed hot or iced coffee or tea, bakery item, packaged snack and more</h3>
-        <p>Treat yourself to an iced coffee, buttery croissant, bag of chips and more..</p>
-        <span className="close" onClick={() => (document.getElementById("100").style.display = "none")}></span>
-      </div>
-
-      <div id="200" className="tabcontent">
-        <img className='img' src={lattescoffee} alt="200" />
-        <h3>Handcrafted drink (Cold Brew, lattes and more) or hot breakfast</h3>
-        <p>Turn good mornings great with a delicious handcrafted drink of your choice, breakfast sandwich or oatmeal on us.</p>
-        <span className="close" onClick={() => (document.getElementById("200").style.display = "none")}></span>
-      </div>
-
-      <div id="300" className="tabcontent">
-        <img className='img' src={sand} alt="300" />
-        <h3>Sandwich, protein box or at-home coffee</h3>
-        <p>Enjoy a PM pick-me-up with a lunch sandwich, protein box or a bag of coffee—including Starbucks VIA Instant®.</p>
-        <span className="close" onClick={() => (document.getElementById("300").style.display = "none")}></span>
-      </div>
-
-      <div id="400" className="tabcontent">
-        <img className='img' src={beer} alt="400" />
-        <h3>Select Starbucks® merchandise</h3>
-        <p>Take home a signature cup, drink tumbler or your choice of coffee merch up to $20.</p>
-        <span className="close" onClick={() => (document.getElementById("400").style.display = "none")}>x</span>
-      </div>
-    </div>
     </div>
   );
 };
 
 export default Tabs;
-

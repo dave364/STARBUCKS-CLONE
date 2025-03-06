@@ -25,22 +25,26 @@
   .left-menu {
     display: flex;
     align-items: center;
-    margin-left: 120px;
-    
+    margin-left: 432px;
+    max-width: 1440px;
+    letter-spacing: 0.1em;
   }
   
   .right-menu {
     display: flex;
     align-items: center;
-    margin-right: 200px;
+    margin-right: 500px;
+    max-width: 1440px;
+
   }
   
   .menu a {
     color: #000000; /* Texto blanco */
     text-decoration: none;
     font-size: 14px;
-    font-weight: bold;
+    font-weight: 700;
     margin-right: 20px;
+ 
   }
   
   .menu a:hover {
@@ -49,8 +53,8 @@
   
   .logo {
     width: 50px; /* Ajusta el tamaño del logo según sea necesario */
-    margin-right: 20px;
-    margin-left: 30px;
+    margin-right: 56px;
+    margin-left: 5px;
   }
   
 .oval-button.sign-in {

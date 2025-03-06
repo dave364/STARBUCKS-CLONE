@@ -22,7 +22,7 @@ const Steps= () => {
       <div className="section">
         <img src={step2Image} alt="Step 2" />
         <h3>Order and pay how you’d like</h3>
-        <p>Use cash, credit/debit card or save some time and pay right through the app. You’ll collect Stars all ways.</p>
+        <p>Use cash, credit/debit card or save some time and pay right through the app. You’ll collect Stars all ways. Learn how</p>
       </div>
       <div className="section">
         <img src={step3Image} alt="Step 3" />

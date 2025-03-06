@@ -1,0 +1,63 @@
+.beneficios-container {
+    max-width: 1440px;
+    margin: auto;
+    text-align: center;
+    padding: 50px 20px;
+  }
+  
+  .top-text h2 {
+    font-size: 31px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .top-text p {
+    font-size: 16px;
+    max-width: 705px;
+    margin: 0 auto 20px;
+    
+  }
+  
+  .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    justify-content: center;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .benefit {
+    text-align: center;
+    max-width: 360px;
+    margin: auto;
+  }
+  
+  .benefit img {
+    width: 30%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
+  
+  .benefit h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .benefit p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  .benefit a {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 16px;
+    color: #006241;
+  }
+  
+  .benefit a:hover {
+    text-decoration: underline;
+  }
+  

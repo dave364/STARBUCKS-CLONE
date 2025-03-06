@@ -1,77 +1,76 @@
-/* Style the tab */
+/* Estilo base de las pestañas */
 .tab {
-    overflow: hidden;
-   
-    background-color: #f1f8f6;
-    display: flex;
-    justify-content: center;
-    margin-top: -20px;
-  }
-  
-  /* Style the buttons that are used to open the tab content */
-  .tab button {
-    background-color: inherit;
-    float: left;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 14px 16px;
-    transition: 0.3s;
-    font-size: 25px;
-  }
-  
+  display: flex;
+  justify-content: center;
+  background-color: #f1f8f6;
+  margin-top: 40px;
+  position: relative;
+}
 
-  
- 
-  
-/* Style the tab content */
+/* Estilo para las pestañas activas */
 .tabcontent {
   display: none;
-  padding: 6px 12px;
-  border: 1px solid #ccc;
-  border-top: none;
+}
+
+.tabcontent.active {
+  display: block;
+}
+
+.tab-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
   background-color: #d4e9e2;
-  animation: fadeEffect 0.3s ease-in-out;
   box-shadow: inset 0 7px 9px -7px #00000024;
 }
 
-@keyframes fadeEffect {
-  from {
-    opacity: 0.3;
-  }
-  to {
-    opacity: 1;
-  }
+.img {
+  max-width: 200px;
+  margin-right: 20px;
 }
 
+.imgtab {
+  margin-right: 60px; 
+  width: 24rem;
+}
 
-  .img {
-    width: 300px;
-  }
-
-  .tablinks.active {
-    position: relative;
-  }
+.text-content {
+  max-width: 346px;
   
-  .tablinks.active::after {
-    content: '';
-    position: absolute;
-    bottom: -9px;
-    left: 0;
-    width: 100%;
-    height: 6px;
-    box-shadow: 0px -6px #008248; /* Para el efecto de sombra */
-  }
+}
 
-  .top-text-tab {
-    font-size: 24px;
-    text-align: center;
-    margin-bottom: 20px;
-    margin-top: 100px;
-    background-color: #f1f8f6;
-  }
-  
-  span {
-    color: #cba258;
-    font-size: 15px;
-  }
+/* Barra verde animada (solo una barra) */
+.active-bar {
+  transition: left 0.3s ease, width 0.3s ease; /* Animación suave de la barra verde */
+  position: absolute;
+  bottom: -9px;
+  height: 6px;
+  background-color: #008248;
+}
+
+/* Estilo para las pestañas (sin duplicación de barra verde) */
+.tab .tablinks {
+  padding: 20px 30px;
+  font-weight: 600;
+  border: none;
+  background-color: transparent;
+  font-size: 27px;
+  cursor: pointer;
+}
+
+.tablinks.active {
+ 
+  position: relative;
+}
+
+span {
+  color: #cba258;
+  font-size: 15px;
+}
+
+.small-symbol::before {
+  content: "\00AE"; /* Código Unicode del símbolo ® */
+  font-size: 60%;
+  vertical-align: top;
+}

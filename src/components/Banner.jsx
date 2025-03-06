@@ -27,7 +27,7 @@ const Banner = () => {
 
     return (
         <div className="banner">
-            <h1>STARBUCKS® REWARDS</h1>
+            <h1>STARBUCKS<span class="small-symbol"></span> REWARDS</h1>
         </div>
     );
 }

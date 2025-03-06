@@ -7,17 +7,28 @@
     position: absolute;
     left: 0; /* Colocar el banner en la parte izquierda */
     z-index: 999; /* Asegurarse de que el banner esté encima de otros elementos */
+    letter-spacing: 1px;
 }
 
   
   .banner h1 {
-    margin: 0; /* Elimina el margen predeterminado del encabezado */
+    
     font-size: 15px; /* Tamaño del texto */
     font-weight: bold; /* Peso de la fuente */
-    margin-left: 230px;
+   
+    max-width: 1440px;
+margin: auto;
   }
   
   .banner h1 sup {
     font-size: 0.6em; /* Tamaño de la marca de marca registrada */
     vertical-align: super; /* Alineación vertical para la marca registrada */
   }
+
+
+.small-symbol::before {
+  content: "\00AE"; /* Código Unicode del símbolo ® */
+  font-size: 60%;
+  vertical-align: top;
+  color: #ffffff;
+}
