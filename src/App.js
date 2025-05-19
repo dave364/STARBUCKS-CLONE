@@ -6,6 +6,8 @@ import Banner from './components/Banner';
 import Steps from './components/Steps';
 import Tabs from './components/Tabs';
 import Beneficios from './components/Beneficios';
+import EarningStars from './components/EarningStars';
+import RewardsPartnersSection from './components/RewardsPartnersSection';
 import './assets/Fonts/stylesheet.css';
 
 import '@fortawesome/fontawesome-free/css/all.min.css';
@@ -23,6 +25,8 @@ function App() {
         <Steps />
         <Tabs/>
         <Beneficios/>
+        <EarningStars/>
+        <RewardsPartnersSection/>
       </div>
     </Router>
   );

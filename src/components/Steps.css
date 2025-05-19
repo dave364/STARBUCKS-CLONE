@@ -14,7 +14,7 @@
     max-width: 360px;
   }
   
-  img {
+ .stepsimg {
     width: 50px; /* Ajusta el tamaño de la imagen según sea necesario */
     margin-bottom: 20px;
   }
@@ -40,16 +40,20 @@
     font-size: 24px;
     text-align: center;
     margin-bottom: 20px;
-    margin-top: 100px;
+    margin-top: 80px;
   }
 
  .Steps-container {
-    height: 500px;
-    max-width: 1440px;
-    margin: auto;
+  height: 450px;
+  max-width: 1425px;
+  margin: auto;
+  padding: 0px 20px 3px;
+  padding-bottom: 1px;
  }
 
  .top-text-tab {
   text-align: center;
 
 }
+
+

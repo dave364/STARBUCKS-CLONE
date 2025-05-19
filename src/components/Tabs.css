@@ -1,10 +1,23 @@
 /* Estilo base de las pestañas */
+
+.topTabs {
+  background-color: #f1f8f6;
+}
+
 .tab {
   display: flex;
   justify-content: center;
   background-color: #f1f8f6;
-  margin-top: 40px;
+  margin-top: 0px;
   position: relative;
+}
+
+.top-text-tab h2 {
+  font-size: 28px;
+  margin-bottom: 25px;
+  background-color: #f1f8f6;
+  margin: 0;
+  padding: 48px 0px 48px;
 }
 
 /* Estilo para las pestañas activas */

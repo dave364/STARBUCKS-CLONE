@@ -62,7 +62,7 @@ const Tabs = () => {
   }, [activeTab]); // El efecto se ejecuta cuando cambia la pestaña activa
 
   return (
-    <div>
+    <div className='topTabs'>
       <div className="top-text-tab">
         <h2>Get your favorites for free</h2>
       </div>

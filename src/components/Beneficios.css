@@ -2,7 +2,7 @@
     max-width: 1440px;
     margin: auto;
     text-align: center;
-    padding: 50px 20px;
+    padding: 55px 20px 165px;
   }
   
   .top-text h2 {
@@ -12,7 +12,7 @@
   }
   
   .top-text p {
-    font-size: 16px;
+    font-size: 15px;
     max-width: 705px;
     margin: 0 auto 20px;
     

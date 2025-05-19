@@ -1,0 +1,87 @@
+.partnership-banner {
+    background-color: #fff;
+    background-image: url(../assets/844262945b2a8b8cfb29.png);
+    padding: 1.8rem 2rem 1.85rem 2rem;
+    text-align: center;
+    background-size: cover;
+  }
+
+ .partnershipcontainer {
+    background-color: #d4e9e2;
+}
+
+.partnercontainer {
+  padding: 24px;
+}
+  
+  .partnership-banner .partnershipcontainer .partnercontainer .title {
+    font-size: 27px;
+    margin-bottom: 1rem;
+    padding: 16px 0px 0px;
+    margin: 0;
+  }
+  
+  .partnership-banner .subtitle {
+    max-width: none;
+    font-size: 1rem;
+    color: #555;
+    padding: 16px 0px 0px;
+    margin: 0;
+  }
+  
+  .partners-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    justify-content: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 32px 50px;
+  }
+  
+  .partner-card {
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+    max-width: 530px;
+    width: 430px;
+  }
+  
+  .partner-card img {
+    margin-bottom: 1rem;
+  }
+  
+  .partner-card a {
+    color: #006241;
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  .partner-card a svg {
+    margin-left: 0.5rem;
+    width: 18px;
+    height: 18px;
+  }
+  /*
+  .partnerbotton {
+    margin-top: 2rem;
+    padding: 50px;
+  }*/
+  
+  .ovalbutton {
+    transition: background-color 0.3s ease;
+    font-weight: 600;
+    line-height: 1.2;
+    display: inline-block;
+    padding: 7px 16px;
+    border-radius: 30px;
+    background-color: #00754A;
+    color: #fff;
+    text-decoration: none;
+    margin-left: -10px;
+  }
+  
+  .ovalbutton:hover {
+    background-color: #005d3d;
+  }
+  
